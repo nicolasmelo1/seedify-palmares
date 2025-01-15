@@ -1,0 +1,46 @@
+{
+  "name": "seedify-palmares",
+  "version": "0.0.0",
+  "description": "Seedify challenge but with my own framework",
+  "keywords": [
+    "palmares",
+    "seedify"
+  ],
+  "homepage": "https://github.com/nicolasmelo1/seedify-palmares#readme",
+  "bugs": {
+    "url": "https://github.com/nicolasmelo1/seedify-palmares/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasmelo1/seedify-palmares.git"
+  },
+  "license": "MIT",
+  "author": "Nicolas Melo",
+  "type": "module",
+  "main": "manage.ts",
+  "scripts": {
+    "load": "tsx manage.ts load-models",
+    "makemigrations": "drizzle-kit generate",
+    "migrate": "tsx migrate.ts",
+    "dev": "tsx watch manage.ts runserver"
+  },
+  "dependencies": {
+    "@palmares/console-logging": "^0.2.6",
+    "@palmares/core": "^0.2.6",
+    "@palmares/databases": "^0.2.14",
+    "@palmares/drizzle-engine": "^0.2.14",
+    "@palmares/express-adapter": "^0.2.7",
+    "@palmares/logging": "^0.2.6",
+    "@palmares/node-std": "^0.2.6",
+    "@palmares/schemas": "^0.2.14",
+    "@palmares/server": "^0.2.7",
+    "@palmares/zod-schema": "^0.2.14",
+    "better-sqlite3": "^11.7.2",
+    "drizzle-kit": "^0.30.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
