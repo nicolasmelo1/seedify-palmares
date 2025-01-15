@@ -1,5 +1,5 @@
 import { ConsoleLogging } from "@palmares/console-logging";
-import { CoreDomain, Domain, defineSettings } from "@palmares/core";
+import { CoreDomain, defineSettings } from "@palmares/core";
 import { DatabasesDomain } from "@palmares/databases";
 import { DrizzleDatabaseAdapter } from "@palmares/drizzle-engine";
 import { drizzle as drizzleBetterSqlite3 } from "@palmares/drizzle-engine/better-sqlite3";
@@ -21,8 +21,6 @@ export const databaseEngine = DrizzleDatabaseAdapter.new({
   type: "better-sqlite3",
   drizzle,
 });
-
-// export const db = databaseEngine[1].instance.instance;
 
 export default defineSettings({
   basePath: dirname(resolve(import.meta.dirname)),
